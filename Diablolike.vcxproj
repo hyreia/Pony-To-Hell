@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BDD4F6B0-1918-41B3-A606-7CE8BAA65799}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Diablolike</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\allegro\5.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\allegro\5.0.9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>allegro-5.0.9-monolith-mt-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\allegro\5.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\allegro\5.0.9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>allegro-5.0.9-monolith-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor.hpp" />
+    <ClInclude Include="ActorCollection.hpp" />
+    <ClInclude Include="ActorComponent.hpp" />
+    <ClInclude Include="ActorImages.hpp" />
+    <ClInclude Include="ActorStatusEffects.hpp" />
+    <ClInclude Include="AttackAndAbilityTypes.hpp" />
+    <ClInclude Include="Body.hpp" />
+    <ClInclude Include="BodyParts.hpp" />
+    <ClInclude Include="Combatant.hpp" />
+    <ClInclude Include="CombatEvent.hpp" />
+    <ClInclude Include="CombatSystem.hpp" />
+    <ClInclude Include="CombatUserInterface.hpp" />
+    <ClInclude Include="GameScreen.hpp" />
+    <ClInclude Include="IndexedImage.hpp" />
+    <ClInclude Include="Color.hpp" />
+    <ClInclude Include="Damage.hpp" />
+    <ClInclude Include="Directions.hpp" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="Graphics.hpp" />
+    <ClInclude Include="Item.hpp" />
+    <ClInclude Include="Items.hpp" />
+    <ClInclude Include="ItemTypes.hpp" />
+    <ClInclude Include="LevelCollection.hpp" />
+    <ClInclude Include="LevelTransitionScreen.hpp" />
+    <ClInclude Include="main.hpp" />
+    <ClInclude Include="ActorMovementManager.hpp" />
+    <ClInclude Include="MenuButton.hpp" />
+    <ClInclude Include="MessageQueue.hpp" />
+    <ClInclude Include="QuitPromptScreen.hpp" />
+    <ClInclude Include="Screen.hpp" />
+    <ClInclude Include="Movement.hpp" />
+    <ClInclude Include="mt19937int.h" />
+    <ClInclude Include="PauseScreenMenu.hpp" />
+    <ClInclude Include="Position.hpp" />
+    <ClInclude Include="PressEnterMenu.hpp" />
+    <ClInclude Include="Random.hpp" />
+    <ClInclude Include="Species.hpp" />
+    <ClInclude Include="SplitString.hpp" />
+    <ClInclude Include="TalkToActorMenu.hpp" />
+    <ClInclude Include="TextType.hpp" />
+    <ClInclude Include="Tiles.hpp" />
+    <ClInclude Include="Villager.hpp" />
+    <ClInclude Include="Ai.hpp" />
+    <ClInclude Include="World.hpp" />
+    <ClInclude Include="XYPair.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorCollection.cpp" />
+    <ClCompile Include="ActorImages.cpp" />
+    <ClCompile Include="Ai.cpp" />
+    <ClCompile Include="Body.cpp" />
+    <ClCompile Include="BodyParts.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Combatant.cpp" />
+    <ClCompile Include="CombatSystem.cpp" />
+    <ClCompile Include="CombatUserInterface.cpp" />
+    <ClCompile Include="Directions.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameScreen.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Items.cpp" />
+    <ClCompile Include="ItemTypes.cpp" />
+    <ClCompile Include="LevelCollection.cpp" />
+    <ClCompile Include="LevelTransitionScreen.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ActorMovementManager.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="MessageQueue.cpp" />
+    <ClCompile Include="Movement.cpp" />
+    <ClCompile Include="PauseScreenMenu.cpp" />
+    <ClCompile Include="Position.cpp" />
+    <ClCompile Include="PressEnterMenu.cpp" />
+    <ClCompile Include="QuitPromptScreen.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="Species.cpp" />
+    <ClCompile Include="TalkToActorMenu.cpp" />
+    <ClCompile Include="TextType.cpp" />
+    <ClCompile Include="Villager.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
